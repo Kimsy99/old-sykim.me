@@ -36,7 +36,7 @@ const BlogCategories = styled.span`
 `
 export default ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About-me" />
     <div>
       <div>
         <h1>Kim Sheng Yong</h1>
@@ -76,20 +76,6 @@ export default ({ data }) => (
           </a>{" "}
           and also you may drop me an email to kimshengyong@gmail.com
         </p>
-      </div>
-      <div>
-        <h1>Blog Posts</h1>
-        <h4>{data.allMarkdownRemark.totalCount} posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Blog key={node.id}>
-            <BlogLink to={node.fields.slug}>
-              <BlogTitle>{node.frontmatter.title}</BlogTitle>
-            </BlogLink>
-            <Date>Posted on {node.frontmatter.date}</Date>
-            <BlogCategories>{node.frontmatter.categories}</BlogCategories>
-            <p>{node.excerpt}</p>
-          </Blog>
-        ))}
       </div>
     </div>
   </Layout>

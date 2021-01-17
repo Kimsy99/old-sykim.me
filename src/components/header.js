@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#5e60ce`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -14,6 +14,9 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        display: `flex`,
+        flexDirection: `row`,
+        justifyContent: `space-between`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -24,9 +27,44 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          sykim
         </Link>
       </h1>
+      <div
+        style={{
+          margin: 0,
+          alignSelf: `center`,
+          justifySelf: `end`,
+          display: `flex`,
+          flexDirection: `row`,
+          justifyContent: `space-between`,
+        }}
+      >
+        <p style={{ margin: 0 }}>
+          <Link
+            to="/about-me"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+              margin: 0,
+            }}
+          >
+            About me
+          </Link>
+        </p>
+        <p style={{ margin: `0 10px` }}>
+          <Link
+            to="/blogs"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+              margin: 0,
+            }}
+          >
+            Blogs
+          </Link>
+        </p>
+      </div>
     </div>
   </header>
 )
