@@ -1,4 +1,7 @@
-:root {
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyles = createGlobalStyle`
+  :root {
   --background-blue: #131d47;
   --highlight-blue: #5ddadb;
   --highlight-pink: #f78eb6;
@@ -84,17 +87,18 @@ li a {
   --rotate: -2deg;
   --scaleX: 1;
   position: relative;
-  /* &:before {
+  text-decoration: none;
+  &:before {
     height: 5px;
     position: absolute;
-    background: var(--highlight-blue));
+    background: var(--highlight-pink);
     content: "";
     width: 100%;
     bottom: -2px;
     z-index: -1;
     transition: transform 0.1s;
     transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX));
-  } */
+  }
   &:hover {
     --scaleX: 1.03;
   }
@@ -657,3 +661,6 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+`
+export default GlobalStyles
