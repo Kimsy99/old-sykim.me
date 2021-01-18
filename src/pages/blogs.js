@@ -40,6 +40,7 @@ export default ({ data }) => (
     <div>
       <h1>Blog Posts</h1>
       <h4>{data.allMarkdownRemark.totalCount} posts</h4>
+      <input />
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Blog key={node.id}>
           <BlogLink to={node.fields.slug}>
