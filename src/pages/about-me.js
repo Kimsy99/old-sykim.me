@@ -5,34 +5,6 @@ import Layout from "../components/layout" //wrap comopennt
 import Image from "../components/image" //provide lazy loading of images
 import SEO from "../components/seo"
 
-const Blog = styled.div`
-  background-color: #3437a2;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-  position: relative;
-`
-
-const BlogLink = styled(Link)``
-const Date = styled.span`
-  font-size: 12px;
-  color: grey;
-`
-const BlogTitle = styled.h3`
-  margin-bottom: 0px;
-`
-const BlogCategories = styled.span`
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  border: 2px solid var(--highlight-pink);
-  padding: 5px;
-  border-radius: 10px;
-`
 export default ({ data }) => (
   <Layout>
     <SEO title="About-me" />
@@ -57,8 +29,8 @@ export default ({ data }) => (
         </p>
         <p>
           My main interest are in Web and App development and also Data Science.
-          You can <a>read more about my skills here</a>, and also{" "}
-          <a>all my previous projects here</a>.
+          You can <Link to="/my-skills">read more about my skills here</Link>,
+          and also <a>all my previous projects here</a>.
         </p>
         <p>
           I have sufficient experience in organizing tech event in univerity,

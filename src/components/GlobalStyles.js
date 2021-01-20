@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
   :root {
-  --background-blue: #131d47;
+  --contrast-blue: #131d47;
   --highlight-blue: #5ddadb;
   --highlight-pink: #f78eb6;
   --white: #efefef;
@@ -19,7 +19,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--white);
+  /* color: var(--white); */
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -30,7 +30,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: var(--background-blue);
+  /* background-color: var(--background-blue); */
 }
 article,
 aside,
