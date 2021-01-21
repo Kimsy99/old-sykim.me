@@ -8,11 +8,11 @@ const SkillContainer = styled.div`
   padding: 20px;
 `
 const SkillTitle = styled.h3`
-  color: var(--white);
+  color: var(--gray);
   margin: 0;
 `
 const SkillDescription = styled.p`
-  color: var(--white);
+  color: var(--gray);
 `
 const Image = styled.img`
   width: 50px;

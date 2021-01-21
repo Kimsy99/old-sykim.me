@@ -11,7 +11,11 @@ export default ({ data }) => (
     <div>
       <div>
         <h3>Hey, I am Kim Sheng Yong</h3>
-        <h1>
+        <h1
+          style={{
+            fontFamily: `Shadows Into Light`,
+          }}
+        >
           "I aim to bring impact to the society with the skills and knowledge I
           have."
         </h1>

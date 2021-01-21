@@ -4,7 +4,14 @@ import styled from "styled-components"
 import Layout from "../components/layout" //wrap comopennt
 import Image from "../components/image" //provide lazy loading of images
 import SEO from "../components/seo"
-
+import {
+  Blog,
+  BlogLink,
+  Intro,
+  Date,
+  BlogTitle,
+  BlogCategories,
+} from "../components/styles/blog.styles"
 import ProfilePicture from "../assets/profile-pic-2.png"
 
 const ProfilePictureMask = styled.img`
@@ -14,39 +21,7 @@ const ProfilePictureMask = styled.img`
   height: auto;
 `
 const Description = styled.div``
-const Blog = styled.div`
-  background-color: #3437a2;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-  position: relative;
-`
-const Intro = styled.div`
-  /* background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%); */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-`
-const BlogLink = styled(Link)``
-const Date = styled.span`
-  font-size: 12px;
-  color: grey;
-`
-const BlogTitle = styled.h3`
-  margin-bottom: 0px;
-`
-const BlogCategories = styled.span`
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  border: 2px solid var(--highlight-pink);
-  padding: 5px;
-  border-radius: 10px;
-`
+
 export default ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -54,7 +29,7 @@ export default ({ data }) => (
       <Intro>
         <ProfilePictureMask src={ProfilePicture} alt="Profile picture" />
         <Description>
-          <h1>Kim Sheng Yong</h1>
+          <h1>Hi, I am Kim Sheng Yong</h1>
           <p>
             I am a student from Xiamen University Malaysia majoring in Software
             Engineering.
