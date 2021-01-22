@@ -483,7 +483,7 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
-  background-color: #3437a2;
+  background-color: var(--gray);
 }
 table {
   margin-left: 0;

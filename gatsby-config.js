@@ -1,3 +1,4 @@
+const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `KimSY Personal Website`,
@@ -20,7 +21,24 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`, //convert md into html
+    // `gatsby-transformer-remark`, //convert md into html
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Light+ (default light)",
+              injectStyles: true,
+              extensions: [],
+              extensionDataDirectory: path.resolve("extensions"),
+              logLevel: "error",
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

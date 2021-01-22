@@ -4,8 +4,6 @@ date: "2020-12-18"
 categories: "Web"
 ---
 
-# Workshop content
-
 # SASS syntax
 
 Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself.
@@ -68,7 +66,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   Then it will translate to css
 
-  ```css
+  ```css {numberLines}
   body {
     font: 100% Helvetica, sans-serif;
     color: #333;
@@ -94,7 +92,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   But in css it would be hard for us because we would need something like this → which are hard to see the hierarchy and cause confusion → generally bad practice
 
-  ```css
+  ```css {numberLines}
   nav ul {
     margin: 0;
     padding: 0;
@@ -114,7 +112,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   With scss we could actually see the hierachy structure better:
 
-  ```scss
+  ```scss {numberLines}
   nav {
     ul {
       margin: 0;
@@ -150,7 +148,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   Basically we could share variables/function/mixins with different scss files using "@use" keyword
 
-  ```css
+  ```css {numberLines}
   //CSS
   body {
     font: 100% Helvetica, sans-serif;
@@ -163,7 +161,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
   }
   ```
 
-  ```scss
+  ```scss {numberLines}
   SCSS
 
   // _base.scss
@@ -188,7 +186,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   Basically it is like a function that scss and just prepare mixin then when we wanna use it we just call it and provide properties.
 
-  ```scss
+  ```scss {numberLines}
   @mixin transform($property) {
     -webkit-transform: $property;
     -ms-transform: $property;
@@ -203,7 +201,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   This is one of the most useful features of Sass. Using @extend lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY (Do not repeat your self). In our example we're going to create a simple series of messaging for errors, warnings and successes using another feature which goes hand in hand with extend, placeholder classes. A placeholder class is a special type of class that only prints when it is extended, and can help keep your compiled CSS neat and clean.
 
-  ```scss
+  ```scss {numberLines}
   /* This CSS will print because %message-shared is extended. */
   %message-shared {
     border: 1px solid #ccc;
@@ -241,7 +239,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   Sometimes we need to do maths in styling → thus Sass have handful of standard math operators like +, -, _, / and _
 
-  ```scss
+  ```scss {numberLines}
   .container {
     width: 100%;
   }
@@ -261,7 +259,7 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
 ### Loops
 
-```
+```{numberLines}
 $squareCount: 4
 @for $i from 1 through $squareCount
   #square-#{$i}
