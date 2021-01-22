@@ -1,12 +1,20 @@
 import { Link } from "gatsby"
+import styled from "styled-components"
 import PropTypes from "prop-types"
 import React from "react"
-
+const Logo = styled(Link)`
+  font-family: "Shadows Into Light", cursive;
+  text-decoration: none;
+`
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#5e60ce`,
+      backgroundColor: `white`,
+      color: `var(--text-color)`,
+      // background: `rgba(186, 160, 160, 0.26)`,
+      // backdropFilter: `blur(250px)`,
       marginBottom: `1.45rem`,
+      boxShadow: `0 4px 12px rgba(0,0,0,0.04)`,
     }}
   >
     <div
@@ -23,7 +31,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            fontFamily: `Shadows Into Light, cursive`,
             textDecoration: `none`,
           }}
         >
@@ -44,7 +52,6 @@ const Header = ({ siteTitle }) => (
           <Link
             to="/about-me"
             style={{
-              color: `white`,
               textDecoration: `none`,
               margin: 0,
             }}
@@ -56,7 +63,6 @@ const Header = ({ siteTitle }) => (
           <Link
             to="/blogs"
             style={{
-              color: `white`,
               textDecoration: `none`,
               margin: 0,
             }}

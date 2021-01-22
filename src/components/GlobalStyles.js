@@ -1,10 +1,17 @@
-:root {
-  --background-blue: #131d47;
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+  
+  :root {
+  --dark-blue: #131d47;
   --highlight-blue: #5ddadb;
   --highlight-pink: #f78eb6;
-  --white: #efefef;
+  --gray: #efefef;
+  --white: #ffffff;
   --bg-gray: #f5f7f9;
   --text-color: #000c2d;
+  --color-gray: #687385;
 }
 
 html {
@@ -18,7 +25,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--white);
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -29,7 +35,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  color: var(--text-color);
+  color: var(---text-color);
+  background-color: var(--bg-gray);
 }
 article,
 aside,
@@ -67,39 +74,43 @@ a {
   -webkit-text-decoration-skip: objects;
   /* color: var(--highlight-blue); */
   color: var(--text-color);
+  
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-thickness: 0.1rem;
   text-decoration-style: double;
-  text-decoration-color: var(--highlight-pink);
+  /* text-decoration-color: var(--highlight-pink); */
   cursor: pointer;
 }
 a:active,
 a:hover {
   outline-width: 0;
   /* color: var(--highlight-pink); */
+  color: var(--color-gray);
   text-underline-offset: 5px;
   text-decoration-thickness: 0.1rem;
-  text-decoration-style: wavy;
+  /* text-decoration-style: wavy; */
 }
 p a,
 li a {
   --rotate: -2deg;
   --scaleX: 1;
   position: relative;
-  /* &:before {
-    height: 5px;
+  text-decoration: none;
+  &:before {
+    height: 3px;
     position: absolute;
-    background: var(--highlight-blue));
+    background: var(--dark-blue);
     content: "";
     width: 100%;
     bottom: -2px;
     z-index: -1;
     transition: transform 0.1s;
     transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX));
-  } */
+  }
   &:hover {
     --scaleX: 1.03;
+    --scaleY: 1.03;
   }
 }
 p a:nth-child(4n + 1) {
@@ -472,7 +483,7 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
-  background-color: #3437a2;
+  background-color: var(--gray);
 }
 table {
   margin-left: 0;
@@ -552,7 +563,6 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
-  color: var(--text-color);
   text-decoration: none;
 }
 ol li {
@@ -660,3 +670,6 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+`
+export default GlobalStyles
