@@ -35,27 +35,23 @@ export default ({ data }) => (
             Engineering.
           </p>
           <p>This is my blog where i express all my ideas.</p>
-          <p>Listed below my Social Media</p>
-          <ul>
-            <li>
-              <a href="https://github.com/Kimsy99" target="_blank">
-                Github
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/kim-sheng-yong-2b7895194/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/kimsyyy99" target="_blank">
-                Twitter
-              </a>
-            </li>
-          </ul>
+          <p>
+            Find me on{" "}
+            <a href="https://github.com/Kimsy99" target="_blank">
+              Github
+            </a>
+            {", "}
+            <a
+              href="https://www.linkedin.com/in/kim-sheng-yong-2b7895194/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+            {", and "}
+            <a href="https://twitter.com/kimsyyy99" target="_blank">
+              Twitter
+            </a>
+          </p>
           <p>
             I am open for any work and collaboration. You have have a look on my{" "}
             <a

@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
   
   :root {
-  --dark-blue: #131d47;
+  --dark-blue: rgba(19,29,71,0.5);
   --highlight-blue: #5ddadb;
   --highlight-pink: #f78eb6;
   --gray: #efefef;
@@ -75,10 +75,10 @@ a {
   /* color: var(--highlight-blue); */
   color: var(--text-color);
   
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-underline-offset: 5px;
   text-decoration-thickness: 0.1rem;
-  text-decoration-style: double;
+  /* text-decoration-style: double; */
   /* text-decoration-color: var(--highlight-pink); */
   cursor: pointer;
 }
@@ -97,20 +97,27 @@ li a {
   --scaleX: 1;
   position: relative;
   text-decoration: none;
-  &:before {
-    height: 3px;
+  &:after {
+    /* height: 3px; */
     position: absolute;
-    background: var(--dark-blue);
+    background-color: var(--dark-blue);
     content: "";
     width: 100%;
     bottom: -2px;
     z-index: -1;
-    transition: transform 0.1s;
-    transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX));
+    left: -0.1em;
+    right: -0.1em;
+    top: 60%;
+    transition: top 200ms cubic-bezier(0,0.8,0.13,1);
+    /* transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX)); */
   }
-  &:hover {
+  &:hover:after {
     --scaleX: 1.03;
     --scaleY: 1.03;
+    top: 0%;
+  }
+  &:hover{
+    color: var(--text-color)
   }
 }
 p a:nth-child(4n + 1) {

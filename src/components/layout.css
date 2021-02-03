@@ -98,9 +98,9 @@ li a {
     transition: transform 0.1s;
     transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX));
   } */
-  &:hover {
+  /* &:hover {
     --scaleX: 1.03;
-  }
+  } */
 }
 p a:nth-child(4n + 1) {
   --rotate: -2deg;

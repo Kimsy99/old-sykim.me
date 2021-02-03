@@ -38,11 +38,10 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
+            fontSize: `0.8em`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a> by Kim Sheng Yong
+          {new Date().getFullYear()} © Kim Sheng Yong
         </footer>
       </div>
     </>

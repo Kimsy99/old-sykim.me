@@ -30,7 +30,9 @@ export const BlogCategories = styled.span`
   position: absolute;
   right: 5px;
   top: 5px;
-  border: 2px solid var(--highlight-pink);
+  color: var(--color-gray);
+  font-size: 0.8em;
+  /* border: 2px solid var(--highlight-pink); */
   padding: 5px;
   border-radius: 10px;
 `

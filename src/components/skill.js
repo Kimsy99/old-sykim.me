@@ -21,15 +21,22 @@ const Image = styled.img`
   margin: 0 10px 0 0;
   padding: 10px;
 `
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
 const Skill = props => {
   const { title, imgURLs, description } = props
   console.log(props)
   return (
     <SkillContainer>
       <SkillTitle>{title}</SkillTitle>
-      {imgURLs.map(url => (
-        <Image src={url} />
-      ))}
+      <ImageContainer>
+        {imgURLs.map(url => (
+          <Image class="inline-block" src={url} />
+        ))}
+      </ImageContainer>
       {/* <Image src="https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg" />
     <Image src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" />
     <Image src="https://images.tutorialedge.net/images/node.png" />
