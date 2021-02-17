@@ -434,7 +434,8 @@ ul {
   padding-top: 0;
   margin-bottom: 1.45rem;
   list-style-position: outside;
-  list-style-image: none;
+  /* list-style-image: none; */
+  list-style-type: circle;
 }
 ol {
   margin-left: 1.45rem;
@@ -446,7 +447,7 @@ ol {
   padding-top: 0;
   margin-bottom: 1.45rem;
   list-style-position: outside;
-  list-style-image: none;
+  list-style-type: circle;
 }
 dl {
   margin-left: 0;
@@ -571,6 +572,7 @@ th {
 li {
   margin-bottom: calc(1.45rem / 2);
   text-decoration: none;
+  color: black;
 }
 ol li {
   padding-left: 0;
