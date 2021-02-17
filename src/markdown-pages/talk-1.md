@@ -1,7 +1,7 @@
 ---
 title: "First post"
 date: "2020-11-3"
-categories: "Univerity"
+categories: "University"
 ---
 
 On the 19th of October 2020, I was invited by XMUM Software Engineering Student Union to share my thoughts on advice for Software Engineering Program Freshman.
