@@ -12,3 +12,11 @@ Currently there are few pages in my personal site:
 2. **About me page** — Include more detailed information about such as my interest, my projects, works and social medias
 3. **Blogs** — for me to create blog post using markdown file and Gatsby will translate it into web pages (will describe in detail in later section)
 4. **404 page** — displayed when there are error in loading pages
+
+To built this page, there are a few prerequisite:-
+
+1. Javascript
+2. CSS
+3. Styled Component (CSS in JS)
+4. React
+

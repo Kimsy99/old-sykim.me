@@ -4,7 +4,8 @@ const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
   
   :root {
-  --dark-blue: rgba(19,29,71,0.5);
+  --dark-blue: #3897D3;
+  --dark-blue-hover: #227cb5;
   --highlight-blue: #5ddadb;
   --highlight-pink: #f78eb6;
   --gray: #efefef;
@@ -25,9 +26,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  /* font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+    "Segoe UI Symbol"; */
+  font-family: 'Inter', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -37,6 +39,8 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
   color: var(---text-color);
   background-color: var(--bg-gray);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
 }
 article,
 aside,
@@ -73,7 +77,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   /* color: var(--highlight-blue); */
-  color: var(--text-color);
+  /* color: var(--text-color); */
   
   /* text-decoration: underline; */
   text-underline-offset: 5px;
@@ -82,11 +86,15 @@ a {
   /* text-decoration-color: var(--highlight-pink); */
   cursor: pointer;
 }
+p a{
+  color: var(--dark-blue);
+  text-decoration: underline;
+}
 a:active,
 a:hover {
   outline-width: 0;
-  /* color: var(--highlight-pink); */
-  color: var(--color-gray);
+  color: var(--color-blue-hover);
+  /* color: red; */
   text-underline-offset: 5px;
   text-decoration-thickness: 0.1rem;
   /* text-decoration-style: wavy; */
@@ -97,8 +105,9 @@ li a {
   --scaleX: 1;
   position: relative;
   text-decoration: none;
-  &:after {
-    /* height: 3px; */
+  color: var(--dark-blue);
+  text-decoration: underline;
+  /* &:after {
     position: absolute;
     background-color: var(--dark-blue);
     content: "";
@@ -109,7 +118,6 @@ li a {
     right: -0.1em;
     top: 60%;
     transition: top 200ms cubic-bezier(0,0.8,0.13,1);
-    /* transform: skew(-20deg) rotate(var(--rotate)) scaleX(var(--scaleX)); */
   }
   &:hover:after {
     --scaleX: 1.03;
@@ -118,7 +126,7 @@ li a {
   }
   &:hover{
     color: var(--text-color)
-  }
+  } */
 }
 p a:nth-child(4n + 1) {
   --rotate: -2deg;

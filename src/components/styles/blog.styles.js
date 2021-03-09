@@ -14,9 +14,9 @@ export const Blog = styled.div`
 `
 export const Intro = styled.div`
   /* background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%); */
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 `
 export const BlogLink = styled(Link)``
 export const Date = styled.span`

@@ -48,12 +48,13 @@ const Header = ({ siteTitle }) => (
           justifyContent: `space-between`,
         }}
       >
-        <p style={{ margin: 0 }}>
+        <p style={{ margin: `0 10px` }}>
           <Link
             to="/about-me"
             style={{
               textDecoration: `none`,
               margin: 0,
+              color: "var(--text-color)",
             }}
           >
             About me
@@ -65,9 +66,22 @@ const Header = ({ siteTitle }) => (
             style={{
               textDecoration: `none`,
               margin: 0,
+              color: "var(--text-color)",
             }}
           >
             Blogs
+          </Link>
+        </p>
+        <p style={{ margin: `0 10px` }}>
+          <Link
+            to="/my-skills"
+            style={{
+              textDecoration: `none`,
+              margin: 0,
+              color: "var(--text-color)",
+            }}
+          >
+            Skills
           </Link>
         </p>
       </div>

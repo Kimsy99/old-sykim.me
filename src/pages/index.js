@@ -15,10 +15,10 @@ import {
 import ProfilePicture from "../assets/profile-pic-2.png"
 
 const ProfilePictureMask = styled.img`
-  margin: 10px 0;
+  margin: auto;
   clip-path: circle(125px at center);
   width: 350px;
-  height: auto;
+  /* height: auto; */
 `
 const Description = styled.div``
 
