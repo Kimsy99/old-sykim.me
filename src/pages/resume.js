@@ -17,7 +17,6 @@ const PdfViewerStyles = styled.embed`
 const Resume = () => (
   <Layout>
     <SEO title="Kim Sheng Yong's Resume" />
-    {console.log(window.location.origin)}
     <PdfViewerStyles
       // src="https://drive.google.com/file/d/1-KgetwrvEAToMAfz8NHebrFC6PDfai3G/view?usp=sharing"
       src={ResumeFile + `#view=FitH`}
