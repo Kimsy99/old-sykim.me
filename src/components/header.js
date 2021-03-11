@@ -6,6 +6,14 @@ const Logo = styled(Link)`
   font-family: "Shadows Into Light", cursive;
   text-decoration: none;
 `
+const Resume = styled(Link)`
+  border-radius: 10px;
+  border: 2px solid var(--dark-blue);
+  padding: 5px;
+  /* font-style: bold; */
+  /* color: var(--dark-blue); */
+  text-decoration: none;
+`
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -83,6 +91,9 @@ const Header = ({ siteTitle }) => (
           >
             Skills
           </Link>
+        </p>
+        <p style={{ margin: `0 10px` }}>
+          <Resume to="/resume">Resume</Resume>
         </p>
       </div>
     </div>
