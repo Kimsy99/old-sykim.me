@@ -25,6 +25,7 @@ export const Date = styled.span`
 `
 export const BlogTitle = styled.h3`
   margin-bottom: 0px;
+  width: 80%;
 `
 export const BlogCategories = styled.span`
   position: absolute;
