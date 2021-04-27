@@ -518,7 +518,8 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-blockquote {
+${
+  "" /* blockquote {
   margin-left: 1.45rem;
   margin-right: 1.45rem;
   margin-top: 0;
@@ -527,7 +528,29 @@ blockquote {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+} */
 }
+blockquote{
+  ${"" /* width:60%; */}
+  margin: 1.6em auto;
+  ${"" /* color: #555555; */}
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid var(--dark-blue) ;
+  line-height:1.6;
+  position: relative;
+  font-weight: 500;
+  font-style: italic;
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote p::before{
+  content: open-quote;
+}
+
+blockquote p::after{
+  content: close-quote;
+}
+
 form {
   margin-left: 0;
   margin-right: 0;
