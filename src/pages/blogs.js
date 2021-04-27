@@ -16,9 +16,11 @@ import {
 
 export const SearchBox = styled.input`
   /* background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%); */
+  background-color: var(--bg-dark-blue);
   margin: 10px 0;
   font-size: 0.8em;
-  border: 5px;
+  padding: 5px;
+  border: 1px solid var(--gray-300);
   &:focus {
     outline: none;
   }
@@ -40,7 +42,7 @@ class Blogs extends React.Component {
       <Layout>
         <SEO title="Blogs" />
         <div>
-          <h1>Blog Posts</h1>
+          <h1>Kim's Blog Posts</h1>
           <h4>{filteredPost.length} posts</h4>
           <SearchBox
             type="search"

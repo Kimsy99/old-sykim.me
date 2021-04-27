@@ -4,15 +4,17 @@ const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
   
   :root {
-  --dark-blue: #3897D3;
+  --dark-blue: #81a7ff;
   --dark-blue-hover: #227cb5;
   --highlight-blue: #5ddadb;
   --highlight-pink: #f78eb6;
   --gray: #efefef;
+  --gray-300: #384357;
   --white: #ffffff;
   --bg-gray: #f5f7f9;
-  --text-color: #000c2d;
+  --text-color: #fff;
   --color-gray: #687385;
+  --bg-dark-blue: #0e182a
 }
 
 html {
@@ -37,8 +39,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  color: var(---text-color);
-  background-color: var(--bg-gray);
+  color: var(--text-color);
+  background-color: var(--bg-dark-blue);
   line-height: 1.4;
   letter-spacing: -0.02em;
 }
@@ -93,7 +95,7 @@ p a{
 a:active,
 a:hover {
   outline-width: 0;
-  color: var(--color-blue-hover);
+  color: var(--dark-blue-hover);
   /* color: red; */
   text-underline-offset: 5px;
   text-decoration-thickness: 0.1rem;
@@ -486,6 +488,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  line-height: 1.7;
 }
 pre {
   margin-left: 0;
@@ -580,7 +583,6 @@ th {
 li {
   margin-bottom: calc(1.45rem / 2);
   text-decoration: none;
-  color: black;
 }
 ol li {
   padding-left: 0;

@@ -23,8 +23,8 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       style={{
-        backgroundColor: `white`,
-        color: `var(--text-color)`,
+        backgroundColor: "var(--bg-dark-blue)",
+        // color: `var(--text-color)`,
         // background: `rgba(186, 160, 160, 0.26)`,
         // backdropFilter: `blur(250px)`,
         marginBottom: `1.45rem`,
@@ -54,7 +54,7 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h1>
         <button
-          className=" inline-flex p-3 hover:bg-gray-500 rounded lg:hidden text-black ml-auto hover:text-black outline-none"
+          className=" inline-flex p-3 rounded lg:hidden  ml-auto  outline-none"
           onClick={handleClick}
         >
           <svg
@@ -82,7 +82,7 @@ const Header = ({ siteTitle }) => {
               to="/about-me"
               className="py-2 border-b-1 border-black lg:border-0 lg:py-0"
             >
-              <a className="lg:inline-flex lg:w-auto w-full h-10 px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-blue ">
+              <a className="lg:inline-flex lg:w-auto w-full h-10 px-3 py-2 rounded  font-bold items-center justify-center ">
                 About
               </a>
             </Link>
@@ -90,7 +90,7 @@ const Header = ({ siteTitle }) => {
               to="/blogs"
               className="py-2 border-b-1 border-black lg:border-0 lg:py-0"
             >
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-black ">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold items-center justify-center ">
                 Blogs
               </a>
             </Link>
@@ -98,7 +98,7 @@ const Header = ({ siteTitle }) => {
               to="/my-skills"
               className="py-2 border-b-1 border-black lg:border-0 lg:py-0"
             >
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-black ">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  font-bold items-center justify-center  ">
                 Skills
               </a>
             </Link>

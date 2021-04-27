@@ -19,6 +19,7 @@ const WrittenBy = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 23.2px;
 `
 const Author = styled.div`
   display: flex;
@@ -33,6 +34,9 @@ const WrittenDate = styled.span`
   font-size: 0.8rem;
   color: var(--color-gray);
 `
+const Separator = styled.hr`
+  background-color: var(--gray-300);
+`
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
@@ -46,6 +50,7 @@ export default ({ data }) => {
             <WrittenDate>{post.frontmatter.date}</WrittenDate>
           </Author>
         </WrittenBy>
+        <Separator />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
