@@ -29,11 +29,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: "Light+ (default light)",
-              injectStyles: true,
-              extensions: [],
-              extensionDataDirectory: path.resolve("extensions"),
-              logLevel: "error",
+              theme: "Night Owl",
+              extensions: [`night-owl`],
+              // logLevel: "error",
+              // wrapperClassName: "dark-visual-studio",
             },
           },
         ],

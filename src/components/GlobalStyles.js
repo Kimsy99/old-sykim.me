@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import "gatsby-remark-vscode/styles.css"
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
@@ -502,7 +503,7 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
-  background-color: var(--gray);
+  border: 1px solid #2F3D56;
 }
 table {
   margin-left: 0;
@@ -691,8 +692,7 @@ code {
   font-size: 14px;
 }
 pre code {
-  background: none;
-  line-height: 1.42;
+  line-height: 1.5;
 }
 code:before,
 code:after,
@@ -712,6 +712,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
+.dark-visual-studio{
+  background-color: #142035;
+}
 `
 export default GlobalStyles

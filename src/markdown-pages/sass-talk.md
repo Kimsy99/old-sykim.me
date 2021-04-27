@@ -54,83 +54,83 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   - Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the \$ symbol to make something a variable. Here's an example:
 
-  ```scss
-  $font-stack: Helvetica, sans-serif;
-  $primary-color: #333;
+```scss {numberLines}
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
 
-  body {
-    font: 100% $font-stack;
-    color: $primary-color;
-  }
-  ```
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
 
-  Then it will translate to css
+Then it will translate to css
 
-  ```css {numberLines}
-  body {
-    font: 100% Helvetica, sans-serif;
-    color: #333;
-  }
-  ```
+```css {numberLines}
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+```
 
 - Nesting
 
   Since we have hierarchy is html → such as
 
-  ```jsx
-  <div className={`${size} menu-item`}>
-    <div
-      className="background-image"
-      style={{ backgroundImage: `url(${imageUrl})` }}
-    />
-    <div className="content">
-      <h1 className="title">{title.toUpperCase()}</h1>
-      <span className="subtitle">Shop now</span>
-    </div>
+```jsx {numberLines}
+<div className={`${size} menu-item`}>
+  <div
+    className="background-image"
+    style={{ backgroundImage: `url(${imageUrl})` }}
+  />
+  <div className="content">
+    <h1 className="title">{title.toUpperCase()}</h1>
+    <span className="subtitle">Shop now</span>
   </div>
-  ```
+</div>
+```
 
-  But in css it would be hard for us because we would need something like this → which are hard to see the hierarchy and cause confusion → generally bad practice
+But in css it would be hard for us because we would need something like this → which are hard to see the hierarchy and cause confusion → generally bad practice
 
-  ```css {numberLines}
-  nav ul {
+```css {numberLines}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+
+- we could see that ul, li and a are selectors that are nested inside the nav selector.
+
+With scss we could actually see the hierachy structure better:
+
+```scss {numberLines}
+nav {
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  nav li {
+
+  li {
     display: inline-block;
   }
-  nav a {
+
+  a {
     display: block;
     padding: 6px 12px;
     text-decoration: none;
   }
-  ```
-
-  - we could see that ul, li and a are selectors that are nested inside the nav selector.
-
-  With scss we could actually see the hierachy structure better:
-
-  ```scss {numberLines}
-  nav {
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    li {
-      display: inline-block;
-    }
-
-    a {
-      display: block;
-      padding: 6px 12px;
-      text-decoration: none;
-    }
-  }
-  ```
+}
+```
 
 - Partials
 
@@ -148,118 +148,118 @@ SASS is used when we need a original syntax, code syntax is not required for SCS
 
   Basically we could share variables/function/mixins with different scss files using "@use" keyword
 
-  ```css {numberLines}
-  //CSS
-  body {
-    font: 100% Helvetica, sans-serif;
-    color: #333;
-  }
+```css {numberLines}
+//CSS
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
 
-  .inverse {
-    background-color: #333;
-    color: white;
-  }
-  ```
+.inverse {
+  background-color: #333;
+  color: white;
+}
+```
 
-  ```scss {numberLines}
-  SCSS
+```scss {numberLines}
+SCSS
 
-  // _base.scss
-  $font-stack:    Helvetica, sans-serif;
-  $primary-color: #333;
+// _base.scss
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
 
-  body {
-    font: 100% $font-stack;
-    color: $primary-color;
-  }
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
 
-  // styles.scss
-  @use 'base';
+// styles.scss
+@use 'base';
 
-  .inverse {
-    background-color: base.$primary-color;
-    color: white;
-  }
-  ```
+.inverse {
+  background-color: base.$primary-color;
+  color: white;
+}
+```
 
 - Mixins
 
   Basically it is like a function that scss and just prepare mixin then when we wanna use it we just call it and provide properties.
 
-  ```scss {numberLines}
-  @mixin transform($property) {
-    -webkit-transform: $property;
-    -ms-transform: $property;
-    transform: $property;
-  }
-  .box {
-    @include transform(rotate(30deg));
-  }
-  ```
+```scss {numberLines}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box {
+  @include transform(rotate(30deg));
+}
+```
 
 - Extend and inheritance
 
   This is one of the most useful features of Sass. Using @extend lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY (Do not repeat your self). In our example we're going to create a simple series of messaging for errors, warnings and successes using another feature which goes hand in hand with extend, placeholder classes. A placeholder class is a special type of class that only prints when it is extended, and can help keep your compiled CSS neat and clean.
 
-  ```scss {numberLines}
-  /* This CSS will print because %message-shared is extended. */
-  %message-shared {
-    border: 1px solid #ccc;
-    padding: 10px;
-    color: #333;
-  }
+```scss {numberLines}
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
 
-  // This CSS won't print because %equal-heights is never extended.
-  %equal-heights {
-    display: flex;
-    flex-wrap: wrap;
-  }
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .message {
-    @extend %message-shared;
-  }
+.message {
+  @extend %message-shared;
+}
 
-  .success {
-    @extend %message-shared;
-    border-color: green;
-  }
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
 
-  .error {
-    @extend %message-shared;
-    border-color: red;
-  }
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
 
-  .warning {
-    @extend %message-shared;
-    border-color: yellow;
-  }
-  ```
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+```
 
 - Operator
 
   Sometimes we need to do maths in styling → thus Sass have handful of standard math operators like +, -, _, / and _
 
-  ```scss {numberLines}
-  .container {
-    width: 100%;
-  }
+```scss {numberLines}
+.container {
+  width: 100%;
+}
 
-  article[role="main"] {
-    float: left;
-    width: 600px / 960px * 100%;
-  }
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
 
-  aside[role="complementary"] {
-    float: right;
-    width: 300px / 960px * 100%;
-  }
-  ```
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+```
 
 [https://codepen.io/Kimsy/pen/MWjoeJK](https://codepen.io/Kimsy/pen/MWjoeJK)
 
 ### Loops
 
-```{numberLines}
+```scss {numberLines}
 $squareCount: 4
 @for $i from 1 through $squareCount
   #square-#{$i}
