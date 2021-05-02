@@ -55,7 +55,7 @@ export default ({ data }) => (
           <p>
             I am open for any work and collaboration. You have have a look on my{" "}
             <a
-              href="https://drive.google.com/file/d/1-KgetwrvEAToMAfz8NHebrFC6PDfai3G/view?usp=sharing"
+              href="https://drive.google.com/file/d/1PvYKSqsedOqwnTjfw-dcpRnJ2ZNg8FLA/view?usp=sharing"
               target="_blank"
             >
               resume

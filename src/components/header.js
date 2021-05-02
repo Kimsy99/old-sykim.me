@@ -105,7 +105,7 @@ const Header = ({ siteTitle }) => {
             <div className="py-2 border-b-1 border-black lg:border-0 lg:py-0">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded font-bold items-center justify-center black ">
                 <Resume
-                  href="https://drive.google.com/file/d/1-KgetwrvEAToMAfz8NHebrFC6PDfai3G/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1PvYKSqsedOqwnTjfw-dcpRnJ2ZNg8FLA/view?usp=sharing"
                   target="_blank"
                 >
                   Resume
