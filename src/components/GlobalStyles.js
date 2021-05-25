@@ -237,9 +237,9 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
   border: none;
   height: 1px;
+  background-color: var(--gray-300);
 }
 button,
 input,
@@ -715,5 +715,34 @@ pre tt:after {
 .dark-visual-studio{
   background-color: #142035;
 }
+.blogs-content{
+
+}
+.blogs-content h1:before {
+  content: "# ";
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blogs-content h2:before {
+  content: "## ";
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blogs-content h3:before {
+  content: "### ";
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blogs-content h4:before {
+  content: "#### ";
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 `
 export default GlobalStyles

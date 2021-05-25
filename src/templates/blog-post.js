@@ -2,7 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
+// import "../styles/blog.css"
 import ProfilePicture from "../assets/profile-pic-2.png"
+import SEO from "../components/seo"
 
 const ProfileIcon = styled.img`
   margin: 10px 0;
@@ -34,13 +36,11 @@ const WrittenDate = styled.span`
   font-size: 0.8rem;
   color: var(--color-gray);
 `
-const Separator = styled.hr`
-  background-color: var(--gray-300);
-`
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <div>
         <h1>{post.frontmatter.title}</h1>
         <WrittenBy>
@@ -50,8 +50,11 @@ export default ({ data }) => {
             <WrittenDate>{post.frontmatter.date}</WrittenDate>
           </Author>
         </WrittenBy>
-        <Separator />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr />
+        <div
+          className="blogs-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </div>
     </Layout>
   )

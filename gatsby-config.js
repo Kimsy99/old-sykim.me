@@ -1,7 +1,8 @@
 const path = require("path")
 module.exports = {
+  // pathPrefix: "/my-gatsby-blog",
   siteMetadata: {
-    title: `KimSY Personal Website`,
+    title: `Kim Sheng Yong's Personal Website`,
     description: `Kim Sheng Yong's Personal site. He shares about tech, life and his thoughts here.`,
     author: `@kimsy`,
   },
