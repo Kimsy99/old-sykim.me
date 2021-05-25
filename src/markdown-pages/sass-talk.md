@@ -75,20 +75,7 @@ body {
 
 - Nesting
 
-  Since we have hierarchy is html → such as
-
-```jsx {numberLines}
-<div className={`${size} menu-item`}>
-  <div
-    className="background-image"
-    style={{ backgroundImage: `url(${imageUrl})` }}
-  />
-  <div className="content">
-    <h1 className="title">{title.toUpperCase()}</h1>
-    <span className="subtitle">Shop now</span>
-  </div>
-</div>
-```
+  Since we have hierarchy is html → such a
 
 But in css it would be hard for us because we would need something like this → which are hard to see the hierarchy and cause confusion → generally bad practice
 
