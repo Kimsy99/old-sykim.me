@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{gWnc:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("Bl7J");n.default=function(){return l.a.createElement(r.a,null,l.a.createElement("h1",null,"Hello from 3rd page"))}}}]);
+//# sourceMappingURL=component---src-pages-page-3-js-55c66a358d858ec3df71.js.map
