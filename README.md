@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 # Old-sykim.me
 
-This is my old personal website (also v1). I had migrated to a new version which are built with NextJS, Typescript. You can view it [here](https://www.sykim.me/)
+This is my old personal website (also v1). I had migrated to a new version which are built with NextJS, Typescript. You can view it [here](https://kimsy.netlify.app)
 
 ## Technologies
 - Gatsby + ReactJS
